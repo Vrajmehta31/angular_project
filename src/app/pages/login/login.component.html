@@ -1,0 +1,149 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()" class="p-3">
+  <div class="form-group">
+    <div>
+      <label for="username" class="form-label">Name:</label>
+      <input
+        class="form-text m-2"
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="userObject.name"
+        required
+        #nameInput="ngModel"
+        minlength="4"
+      />
+      <div *ngIf="nameInput.invalid && nameInput.touched">
+        <p *ngIf="nameInput.errors?.['required']" class="text-danger">
+          Name Is Required
+        </p>
+        <p *ngIf="nameInput.errors?.['minlength']" class="text-danger">
+          Minimum 4 char required!
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <label for="password" class="col-form-label">Password:</label>
+      <input
+        class="form-text m-2"
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="userObject.password"
+        required
+        #password="ngModel"
+        minlength="8"
+      />
+      <div *ngIf="password.dirty && password.touched">
+        <p *ngIf="password.errors?.['required']" class="text-danger">
+          Password Is Required
+        </p>
+        <p *ngIf="password.errors?.['minlength']" class="text-danger">
+          Minimum 80 char required!
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <label for="city" class="col-form-label">City:</label>
+      <input
+        class="form-text m-2"
+        type="text"
+        id="city"
+        name="city"
+        [(ngModel)]="userObject.city"
+        required
+        #city="ngModel"
+      />
+      <div *ngIf="city.invalid && city.touched">
+        <p *ngIf="city.errors?.['required']" class="text-danger">
+          City Is Required
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <label for="state" class="col-form-label">State</label>
+      <select
+        class="form-dropdown m-2"
+        id="state"
+        name="state"
+        [(ngModel)]="userObject.state"
+        required
+        #state="ngModel"
+        placeholder="Select State"
+      >
+        <option>Gujarat</option>
+        <option>Maharashtra</option>
+        <option>Goa</option>
+        <option>Rajasthan</option>
+        <option>Delhi</option>
+      </select>
+      <div *ngIf="state.invalid && state.touched">
+        <p *ngIf="city.errors?.['required']" class="text-danger">
+          State Is Required
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <label for="zip" class="col-form-label">Zip Code</label>
+      <input
+        class="form-text m-2"
+        type="text"
+        id="zip"
+        name="zip"
+        [(ngModel)]="userObject.zipCode"
+        required
+        minlength="6"
+        maxlength="6"
+        #zip="ngModel"
+      />
+      <div *ngIf="zip.invalid && zip.touched">
+        <p *ngIf="zip.errors?.['required']" class="text-danger">
+          Zip Code Is Required
+        </p>
+        <p
+          *ngIf="zip.errors?.['minlength'] && zip.errors?.['maxlength']"
+          class="text-danger"
+        >
+          Zip code length is invalid
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <label for="zip" class="col-form-label">Check Me</label>
+      <input
+        class="form-text m-2"
+        type="checkbox"
+        id="check"
+        name="check"
+        [(ngModel)]="userObject.conditions"
+        required
+        #check="ngModel"
+      />
+      <div *ngIf="zip.invalid && zip.touched">
+        <p *ngIf="zip.errors?.['required']" class="text-danger">
+          Check the box!!
+        </p>
+      </div>
+    </div>
+
+    <div>
+      <button
+        type="submit"
+        [disabled]="myForm.invalid"
+        class="btn-outline-light"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</form>
+
+@if (showData) {
+  <div>
+    <p>{{ userObject | json }}</p>
+  </div>
+}

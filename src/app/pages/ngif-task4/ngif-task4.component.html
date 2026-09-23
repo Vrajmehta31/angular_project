@@ -1,0 +1,43 @@
+<div class="card">
+  <h3>Task 4 - Registration Form</h3>
+
+  <label>First name</label>
+  <input type="text" [(ngModel)]="firstName" />
+
+  <label>Last name</label>
+  <input type="text" [(ngModel)]="lastName" />
+
+  <label>Full Name</label>
+  <input type="text" [value]="fullName" disabled />
+
+  <label>State</label>
+  <select [(ngModel)]="state">
+    <option value="">Choose...</option>
+    <option value="Gujarat">Gujarat</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="text" placeholder="Enter State" *ngIf="state === 'Other'" [(ngModel)]="otherState" />
+
+  <label>City</label>
+  <select [(ngModel)]="city">
+    <option value="">Choose...</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="Pune">Pune</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="text" placeholder="Enter City" *ngIf="city === 'Other'" [(ngModel)]="otherCity" />
+
+  <p class="label-center">What Are You ..?</p>
+  <div class="row">
+    <label><input type="checkbox" [(ngModel)]="isTeacher" /> Teacher</label>
+    <label><input type="checkbox" [(ngModel)]="isSportPerson" /> Sport Person</label>
+    <label><input type="checkbox" [(ngModel)]="isMusician" /> Musician</label>
+  </div>
+
+  <div *ngIf="isTeacher" class="box green">You selected: Teacher</div>
+  <div *ngIf="isSportPerson" class="box gray">You selected: Sport Person</div>
+  <div *ngIf="isMusician" class="box blue">You selected: Musician</div>
+
+  <button (click)="submitForm()">Submit form</button>
+</div>

@@ -1,0 +1,108 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.icon-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, navy, #4a6fd8);
+  margin-bottom: 16px;
+}
+
+.icon-wrapper .icon {
+  font-size: 40px;
+  line-height: 1;
+}
+
+h2 {
+  color: navy;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  letter-spacing: 0.3px;
+}
+
+.field {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.field label {
+  display: block;
+  color: #8a8f9c;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2430;
+  background: #f8f9fc;
+  border: 1px solid #dfe3ee;
+  border-radius: 8px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%238a8f9c'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+select:focus {
+  outline: none;
+  border-color: navy;
+  box-shadow: 0 0 0 3px rgba(0, 0, 128, 0.12);
+}
+
+button {
+  width: 100%;
+  padding: 12px 0;
+  background: navy;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #16176e;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}

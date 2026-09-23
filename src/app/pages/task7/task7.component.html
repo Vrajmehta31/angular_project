@@ -1,0 +1,19 @@
+<p>task7 works!</p>
+<div class="card">
+  <h3>ngIf Task 5 - Student Table</h3>
+  <table border="1" cellpadding="6">
+    <thead>
+      <tr><th>Sr</th><th>Name</th><th>Age</th><th>Attendance</th><th>Is Indian</th><th>Gender</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ ageDisplay(s.age) }}</td>
+        <td>{{ attendanceDisplay(s.attendance) }}</td>
+        <td><span *ngIf="s.isIndian">Indian</span><span *ngIf="!s.isIndian">Foreigner</span></td>
+        <td><span *ngIf="s.gender === 'M'">Male</span><span *ngIf="s.gender !== 'M'">Female</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

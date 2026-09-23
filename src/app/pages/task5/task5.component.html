@@ -1,0 +1,22 @@
+<p>task5 works!</p>
+<!-- task5.component.html -->
+<div class="card">
+  <h3>Task 5 &amp; 6 - Single Row Selectable Student Table</h3>
+
+  <table border="1" cellpadding="6">
+    <thead>
+      <tr><th>Sr No</th><th>Name</th><th>Gender</th><th>State</th></tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let s of students; let i = index"
+        [ngClass]="{ 'bg-secondary': s.studId === selectedStudId }"
+        (click)="selectRow(s.studId)">
+        <td>{{ i + 1 }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.gender }}</td>
+        <td>{{ s.state }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

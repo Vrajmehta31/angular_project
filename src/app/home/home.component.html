@@ -1,0 +1,15 @@
+<main class="main">
+  <div class="home-container">
+    <h1>Angular Assignments</h1>
+
+    <p class="subtitle">Select any practical to view its implementation.</p>
+
+    <div class="pill-group">
+      @for (item of practicals; track item.title) {
+        <a class="pill" [routerLink]="item.link">
+          {{ item.title }}
+        </a>
+      }
+    </div>
+  </div>
+</main>

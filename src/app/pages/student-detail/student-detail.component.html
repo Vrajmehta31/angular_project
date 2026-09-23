@@ -1,0 +1,12 @@
+<p>student-detail works!</p>
+<div class="practical-box">
+  <h2>Practical 19 — Route Params: Student Details</h2>
+  <div *ngIf="student; else notFound">
+    <p><strong>ID:</strong> {{ student.id }}</p>
+    <p><strong>Name:</strong> {{ student.name }}</p>
+    <p><strong>Course:</strong> {{ student.course }}</p>
+  </div>
+  <ng-template #notFound>
+    <p>No student found with this ID.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,2 @@
+.subject-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.subject-row input { flex: 1; padding: 6px; }

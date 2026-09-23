@@ -1,0 +1,11 @@
+<p>task10 works!</p>
+<div class="card">
+  <h3>ngFor Task 3 - Multiplication Table</h3>
+  <div class="row">
+    <input type="text" placeholder="Enter Number" [(ngModel)]="numberInput" />
+    <button (click)="printTable()">Print Table</button>
+  </div>
+  <table border="1" cellpadding="6" *ngIf="tableRows.length">
+    <tr *ngFor="let row of tableRows"><td>{{ numberInput }} x {{ row.multiplier }} = {{ row.result }}</td></tr>
+  </table>
+</div>

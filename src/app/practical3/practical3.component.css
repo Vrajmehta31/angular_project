@@ -1,0 +1,111 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.table-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: navy;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px;
+  letter-spacing: 0.3px;
+  align-self: center;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  border: 1px solid #eef0f5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead tr {
+  background: navy;
+}
+
+th {
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding: 14px 16px;
+}
+
+td {
+  padding: 12px 16px;
+  color: #1f2430;
+  border-bottom: 1px solid #eef0f5;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f9fc;
+}
+
+tbody tr:hover {
+  background: #eef1fb;
+  transition: background 0.15s ease;
+}
+
+.badge {
+  display: inline-block;
+  background: #e6eaf9;
+  color: navy;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+button {
+  width: 100%;
+  max-width: 260px;
+  padding: 12px 0;
+  background: navy;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #16176e;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,22 @@
+<div class="profile-card">
+  <div class="photo-wrapper">
+    <img src="{{ user.photo }}" alt="Profile Photo" width="150" height="150" />
+  </div>
+
+  <h2>User Profile</h2>
+
+  <div class="info-list">
+    <p>
+      <span class="label">Name</span><span class="value">{{ user.name }}</span>
+    </p>
+    <p>
+      <span class="label">Email</span
+      ><span class="value">{{ user.email }}</span>
+    </p>
+    <p>
+      <span class="label">Age</span><span class="value">{{ user.age }}</span>
+    </p>
+  </div>
+
+  <button routerLink="/">Back to Home</button>
+</div>

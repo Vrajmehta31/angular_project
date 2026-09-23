@@ -1,0 +1,14 @@
+<div class="profile-card">
+  <h2>Select Course</h2>
+
+  <div class="field">
+    <label for="course">Select a Course</label>
+    <select id="course">
+      <option *ngFor="let course of courses">
+        {{ course }}
+      </option>
+    </select>
+  </div>
+
+  <button routerLink="/">Back to Home</button>
+</div>

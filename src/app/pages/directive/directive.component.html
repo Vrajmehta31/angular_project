@@ -1,0 +1,70 @@
+<html>
+  <body class="p-2">
+    <div>
+      @if (isUserLoggedIn) {
+        <div>
+          <h3 class="alert alert-success">Welcome User!</h3>
+        </div>
+      } @else {
+        <h3 class="alert alert-danger">Please Login</h3>
+      }
+    </div>
+    <div>
+      @if (isUserLoggedIn) {
+        <div>
+          <ul>
+            <li>{{ student.id }}</li>
+            <li>{{ student.name }}</li>
+            <li>{{ student.marks }}</li>
+            <li>{{ student.course }}</li>
+          </ul>
+        </div>
+      }
+
+      <button (click)="switchCourse()">Switch</button>
+    </div>
+    <div class="p-3">
+      <div class="row p-3" [ngClass]="className">
+        {{ content }}
+      </div>
+      <button class="bg-primary" (click)="switchPri()" [ngClass]="className">
+        Primary
+      </button>
+      <button class="bg-success" (click)="switchSuc()">Success</button>
+    </div>
+    <div>
+      <ul>
+        @for (city of cities; track city) {
+          @if (city === "Ahmedabad") {
+            <li class="text-warning">{{ city }}</li>
+          } @else {
+            <li>{{ city }}</li>
+          }
+        }
+      </ul>
+    </div>
+    <div>
+      <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (emp of employees; track emp.id) {
+            <tr>
+              <td>{{ emp.id }}</td>
+              <td>{{ emp.name }}</td>
+              <td>{{ emp.department }}</td>
+              <td>{{ emp.salary }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

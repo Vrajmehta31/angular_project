@@ -1,0 +1,18 @@
+<p>practical24 works!</p>
+<div class="practical-box">
+  <h2>Practical 24 — Dynamic Form: FormArray</h2>
+
+  <form [formGroup]="subjectForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="subjects">
+      <div *ngFor="let subject of subjects.controls; let i = index" [formGroupName]="i" class="subject-row">
+        <input type="text" formControlName="subjectName" placeholder="Subject name">
+        <input type="number" formControlName="marks" placeholder="Marks">
+        <button type="button" (click)="removeSubject(i)" [disabled]="subjects.length === 1">Remove</button>
+      </div>
+    </div>
+
+    <button type="button" (click)="addSubject()">+ Add Subject</button>
+    <br><br>
+    <button type="submit" [disabled]="subjectForm.invalid">Submit</button>
+  </form>
+</div>

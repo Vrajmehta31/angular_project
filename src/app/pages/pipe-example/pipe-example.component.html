@@ -1,0 +1,41 @@
+<html>
+  <body>
+    <h2>{{ today | date }}</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (emp of employees; track emp.id) {
+          <tr>
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.name | uppercase }}</td>
+            <td>{{ emp.department | lowercase }}</td>
+            <td>{{ emp.salary | currency: "EUR" }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+
+    <p>{{ currentUser | json }}</p>
+    <p>{{ "this is the example of title case pipe" | titlecase }}</p>
+    <p>{{ cities | slice: 1 : 4 }}</p>
+
+    <h2>Custom Pipe</h2>
+    <div class="col-3 p-2 m-2">
+      @for (empobj of emp; track empobj.id) {
+        <p>{{ empobj.id }}</p>
+        <p>{{ empobj.name }}</p>
+        <p>{{ empobj.city }}</p>
+        <p>{{ empobj.state | na }}</p>
+      }
+    </div>
+  </body>
+</html>

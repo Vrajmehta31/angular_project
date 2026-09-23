@@ -1,0 +1,41 @@
+<p>practical21 works!</p>
+<div class="practical-box">
+  <h2>Practical 21 — Template-Driven Form: Student Admission</h2>
+
+  <form #admissionForm="ngForm" (ngSubmit)="onSubmit(admissionForm)">
+
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="name" required #nameField="ngModel">
+    <div class="error" *ngIf="nameField.invalid && nameField.touched">Name is required.</div>
+
+    <label>Email:</label>
+    <input type="email" name="email" [(ngModel)]="email" required email #emailField="ngModel">
+    <div class="error" *ngIf="emailField.invalid && emailField.touched">
+      Valid email is required.
+    </div>
+
+    <label>Gender:</label>
+    <select name="gender" [(ngModel)]="gender" required #genderField="ngModel">
+      <option value="" disabled selected>Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+    <div class="error" *ngIf="genderField.invalid && genderField.touched">Gender is required.</div>
+
+    <label>Course:</label>
+    <select name="course" [(ngModel)]="course" required #courseField="ngModel">
+      <option value="" disabled selected>Select Course</option>
+      <option value="BCA">BCA</option>
+      <option value="BSc IT">BSc IT</option>
+      <option value="MCA">MCA</option>
+    </select>
+    <div class="error" *ngIf="courseField.invalid && courseField.touched">Course is required.</div>
+
+    <button type="submit" [disabled]="admissionForm.invalid">Submit</button>
+  </form>
+
+  <div class="success" *ngIf="submitted">
+    ✅ Admission submitted for {{ name }} ({{ course }})
+  </div>
+</div>

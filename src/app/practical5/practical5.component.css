@@ -1,0 +1,95 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+h2 {
+  color: navy;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 24px;
+  letter-spacing: 0.3px;
+}
+
+.stats-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fc;
+  border: 1px solid #eef0f5;
+  border-radius: 12px;
+  padding: 22px 12px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 128, 0.08);
+}
+
+
+.stat-value {
+  color: navy;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: #8a8f9c;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+button {
+  width: 100%;
+  max-width: 260px;
+  padding: 12px 0;
+  background: navy;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: #16176e;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}

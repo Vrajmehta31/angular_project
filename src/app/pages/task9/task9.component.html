@@ -1,0 +1,7 @@
+<p>task9 works!</p>
+<div class="card">
+  <h3>ngFor Task 2 - Language Buttons</h3>
+  <button *ngFor="let lang of languages" [class.selected]="lang === selectedLanguage" (click)="selectLanguage(lang)">
+    {{ lang }}
+  </button>
+</div>

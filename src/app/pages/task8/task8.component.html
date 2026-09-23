@@ -1,0 +1,15 @@
+<p>task8 works!</p><div class="card">
+  <h3>ngFor Task 1 - Add City</h3>
+  <div class="row">
+    <input type="text" placeholder="Enter City" [(ngModel)]="cityInput" />
+    <button (click)="addCity()">Add City</button>
+  </div>
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  <div class="row">
+    <select>
+      <option value="">Select City</option>
+      <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+    <span>Total City Added: {{ cities.length }}</span>
+  </div>
+</div>

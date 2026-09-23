@@ -1,0 +1,16 @@
+<div class="card">
+  <h3>Task 1 - Radio Button Gender Select</h3>
+
+  <label>
+    <input type="radio" name="gender" value="male" [(ngModel)]="gender" />
+    Male
+  </label>
+
+  <label>
+    <input type="radio" name="gender" value="female" [(ngModel)]="gender" />
+    Female
+  </label>
+
+  <p *ngIf="gender === 'male'">You Have selected Male</p>
+  <p *ngIf="gender === 'female'">You Have selected Female</p>
+</div>

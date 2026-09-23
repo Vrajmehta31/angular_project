@@ -1,0 +1,15 @@
+<div class="practical-box">
+  <h2>Practical 20 — Route Guard: Protect Admin Page</h2>
+
+  <p>Status:
+    <strong [style.color]="authService.isLoggedIn() ? 'green' : 'red'">
+      {{ authService.isLoggedIn() ? 'Logged In' : 'Logged Out' }}
+    </strong>
+  </p>
+
+  <button (click)="login()">Login</button>
+  <button (click)="logout()">Logout</button>
+
+  <br><br>
+  <button (click)="goToAdmin()">Go to Admin Page</button>
+</div>

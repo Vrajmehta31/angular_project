@@ -1,0 +1,20 @@
+<div class="card">
+  <h3>Task 3 - Show / Hide / Toggle Divs</h3>
+
+  <div class="row">
+    <div class="box green" *ngIf="isDiv1Visible">Div 1</div>
+    <div class="box gray" *ngIf="isDiv2Visible">Div 2</div>
+    <div class="box blue" *ngIf="!(num1 !== '' && num1 === num2)">Div 3</div>
+  </div>
+
+  <div class="row controls">
+    <button (click)="show()">Show</button>
+    <button (click)="hide()">Hide</button>
+    <button (click)="toggleDiv2()">Show / Hide</button>
+  </div>
+
+  <div class="row">
+    <input type="text" placeholder="Num 1" [(ngModel)]="num1" />
+    <input type="text" placeholder="Num 2" [(ngModel)]="num2" />
+  </div>
+</div>>

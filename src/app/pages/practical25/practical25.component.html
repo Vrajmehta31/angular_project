@@ -1,0 +1,23 @@
+<p>practical25 works!</p>
+<div class="practical-box">
+  <h2>Practical 25 — File Upload with Preview (Template-Driven)</h2>
+
+  <form #uploadForm="ngForm" (ngSubmit)="onSubmit(uploadForm)">
+    <label>Name:</label>
+    <input type="text" name="name" [(ngModel)]="name" required>
+
+    <label>Profile Picture:</label>
+    <input type="file" name="profilePic" accept="image/*" (change)="onFileSelected($event)" required>
+
+    <div *ngIf="previewUrl" class="preview">
+      <p>Preview:</p>
+      <img [src]="previewUrl" alt="Profile preview">
+    </div>
+
+    <button type="submit" [disabled]="uploadForm.invalid || !selectedFile">Submit</button>
+  </form>
+
+  <div class="success" *ngIf="submitted">
+    ✅ Profile picture uploaded for {{ name }}
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<p>practical23 works!</p>
+<div class="practical-box">
+  <h2>Practical 23 — Custom Validator: Password Strength</h2>
+
+  <form [formGroup]="passwordForm">
+    <label>Password:</label>
+    <input type="password" formControlName="password">
+
+    <div class="error" *ngIf="password?.hasError('required') && password?.touched">
+      Password is required.
+    </div>
+
+    <div class="error" *ngIf="password?.hasError('weakPassword') && password?.touched">
+      Password must contain a capital letter, a number, and a special character.
+    </div>
+
+    <div class="success" *ngIf="password?.valid">
+      ✅ Strong password!
+    </div>
+  </form>
+</div>

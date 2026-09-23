@@ -1,0 +1,15 @@
+<div class="practical-box">
+  <h2>Practical 12 — Custom Pipe: Abbreviate Full Name</h2>
+
+  <p><strong>Full Name:</strong> {{ fullName }}</p>
+  <p><strong>Abbreviated:</strong> {{ fullName | abbreviateName }}</p>
+
+  <hr>
+
+  <h4>More examples:</h4>
+  <ul>
+    <li *ngFor="let n of names">
+      {{ n }} → <b>{{ n | abbreviateName }}</b>
+    </li>
+  </ul>
+</div>
