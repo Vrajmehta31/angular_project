@@ -11,8 +11,8 @@ import { RouterLink } from '@angular/router';
 export class Practical1Component {
   user = {
     name: 'Amit Shah',
-    email: 'amit@example.com',
+    email: 'virat@example.com',
     age: 21,
-    photo: 'image.png',
+    photo: '', // left blank — no image set
   };
 }

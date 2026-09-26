@@ -11,9 +11,9 @@ import { RouterLink } from '@angular/router';
 })
 export class Practical2Component {
   student: Student = {
-    id: 1258,
-    name: 'Anas',
+    id: 1214,
+    name: 'Vraj Mehta',
     course: 'MCA',
-    marks: 94,
+    marks: 95,
   };
 }
